@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gym Progress Tracker</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <!-- Favicon -->
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Gym Progress Tracker</a>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="jumbotron jumbotron-fluid text-center text-white">
+        <div class="overlay"></div>
+        <div class="container">
+            <h1 class="display-4">Track Your Gym Progress</h1>
+            <p class="lead">Stay motivated and see your transformation over time!</p>
+        </div>
+    </header>
+
+    <!-- Motivational Quotes Carousel -->
+    <!-- ... (No changes needed here) ... -->
+
+    <!-- Upload Section -->
+    <!-- ... (No changes needed here) ... -->
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="container my-5">
+        <h2 class="text-center">Your Progress Over Time</h2>
+        <div class="timeline">
+            {% for image in images %}
+            <div class="timeline-item">
+                <div class="timeline-img">
+                    <img src="{{ url_for('file', filename=image.filename) }}" alt="Progress Photo">
+                </div>
+                <div class="timeline-content">
+                    <h3>{{ image.upload_date_str }}</h3>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- ... (No changes needed here) ... -->
+
+    <!-- jQuery and Bootstrap JS -->
+    <!-- ... (No changes needed here) ... -->
+
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

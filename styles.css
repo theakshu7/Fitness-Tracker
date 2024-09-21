@@ -1,0 +1,154 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.jumbotron {
+    position: relative;
+    background-image: url('../images/gym_background.jpg');
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 0;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.jumbotron .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.jumbotron .container {
+    position: relative;
+    z-index: 1;
+}
+
+blockquote {
+    font-style: italic;
+    margin: 20px auto;
+    color: #555;
+}
+
+blockquote footer {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #777;
+}
+
+#upload h2, #gallery h2 {
+    margin-bottom: 30px;
+}
+
+.card {
+    border: none;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    height: 300px;
+    object-fit: cover;
+}
+
+footer {
+    margin-top: 50px;
+}
+
+.timeline {
+    position: relative;
+    padding: 20px 0;
+    list-style: none;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #e9ecef;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    margin: 20px 0;
+}
+
+.timeline-item:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    float: left;
+    text-align: right;
+    padding-right: 30px;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    float: right;
+    text-align: left;
+    padding-left: 30px;
+}
+
+.timeline-item .timeline-img {
+    position: absolute;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 0 0 4px #007bff;
+    background-color: #fff;
+}
+
+.timeline-item .timeline-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.timeline-item .timeline-content {
+    width: 45%;
+}
+
+.timeline-item h3 {
+    margin-top: 0;
+    font-size: 1.25rem;
+    color: #007bff;
+}
+
+@media (max-width: 767px) {
+    .timeline:before {
+        left: 50px;
+    }
+    .timeline-item .timeline-img {
+        left: 50px;
+        transform: translateX(0);
+    }
+    .timeline-item:nth-child(odd) .timeline-content,
+    .timeline-item:nth-child(even) .timeline-content {
+        float: none;
+        text-align: left;
+        padding: 0 20px;
+        width: 100%;
+    }
+}
